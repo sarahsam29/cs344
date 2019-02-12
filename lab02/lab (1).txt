@@ -1,0 +1,32 @@
+﻿Sarah Samuel
+CS 344
+
+
+Exercise 2.1: 
+
+
+1. The local search algorithms that solve the problem are Hill- climbing solution, and Simulated annealing solution. hill-climbing seems to do better in terms of run-time
+2.  By calculating how long each algorithm took, using time.time(), I discovered it that Hill-climbing solution is faster.
+3. After running the program a couple of times, I am not able to observe a difference between the different values of x. However, theoretically, it would make sense that if an x is closer to the solution value then it would take less time to get there than if x were farther away from the solution.
+4. Changing delta should impact the number of spaces the new value is from the current x, in both directions ( x- delta, x + delta) but keeps the highest of the two values for hill climbing, and for simulated chooses the value that will help it get to the global optimum. 
+5. When I changed delta, the initial x seems to never be the same as the Hill-climbing and Simulated annealing x. But changing the delta should theoretically impact how many spaces, in both directions, the new value is from the current x. 
+6. I’m not positive as to what the The exp_schedule function does, but I believe it is related to the exponential function discussed in class. The parameter k defines the maximum number of steps taken between states, and limit refers to the boundary in regards to the x value. 
+
+
+Exercise 2.2:
+1. Even for SineVariant, hill-climbing solution was faster to achieve. Changing the problem from performing fairly simple math problem to another will never significantly change the runtime. This is because the simulated annealing algorithm itself has a slower runtime, because, unlike the hill-climbing solutions that only considers better options than the current state to reach a solution, the simulated annealing algorithm considers options that are worse than the current to obtain the global optimum. 
+2. Theoretically speaking, even in this the sine variant space, an x that is closer to the solution should take less time than then if x were farther away from the solution.
+3. Modifying the delta changes the search window in simulated annealing so that it can search for the best state within that window. For hill-climbing, x is x + delta or x-delta, and chooses the best of the two results. 
+4. The minimum should be 0 because of the absolute value function, and the maximum is hard to define because it is based on the initial value and delta. Moreover, because the sine function does not include maximum. Both the hill-climbing solution and simulated annealing solution score well as I haven’t come across a value that is less than 0. 
+
+
+Exercise 2.3:
+1. The random restarts is there to make sure the problems do not get stuck in a local minimum. I chose to randomly restart 20 times, and then again 50 times to see how the algorithms did. Changing the number of times I randomly restarted the algorithm made no difference for abs variant - it always returned 15.0 for both x and value, which makes sense because the highest generated x is 15 and when you plug that into the abs variant equation, with maximum 30, the value should also be 15. For the sin variant function however, I notice that x takes on values above 30, and I am not positive as to why but I’m assuming it is because the function Sinvariant does not take ‘maximum’ (that is set at 30) as a parameter. 
+2. The average values for AbsVariant is 15, because I am always getting 15 as the value. Since the x and value are vary greatly from the first run to the next (and so on), it is harder to determine what the average of SinVariant is. 
+3. Once again, hill climbing runs faster than simulated annealing. For the Absvariant function, because the solution is always the same, I think hill climbing solution is better because it gets there faster. However, overall, if run-time was a big consideration, I believe that simulated annealing is a better approach because it attempts to reach the global optimum solution as opposed to being happy with the local maximum. 
+
+
+Exercise 2.4: 
+1. It would make sense for simulated annealing algorithm to use beam search because simulated annealing often chooses potentially worse states if it can lead to the global optimum. Therefore beam search can potentially minimize the number of “worse states” it chooses as part of getting to the end goal.  
+2. I believe that it only has one solution, and the best one. While there are partial solutions, beam search disregards the candidates with high heuristic cost, to lead to you to the solution only using the partial solutions that have the best path. 
+3. Beam search can be used in choosing x because right now x is chosen randomly. Choosing a sensible x that has a lower heuristic cost to reach an end goal could make the functions faster. I believe that beam search is different in random restart in that it prioritizes certain good x values over random choices of x.
