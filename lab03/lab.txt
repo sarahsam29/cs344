@@ -1,0 +1,24 @@
+﻿Sarah Samuel
+16/2/2019
+
+
+Exercise 3.1
+
+
+1. When the sudoku puzzle was set to run the easy configuration, AC3 found a solution very quickly. After waiting for a while, backtracking also found a solution. Both the depth-first search and min-conflicts failed to find a solution. When I changed the difficulty level to “hard” and “harder”, none of the four algorithms were able to find a solution. Because of only needing to check the consistency of a single arc, it would make sense why AC3 works so well for sudoku, where only needing to be aware of a single digit’s constraints is necessary. It also makes sense that min_conflicts would fail because it relies heavily on the starting point and how close to a solution the starting point already is. Therefore without random restarts, it has low probability of finding a solution. 
+
+
+1. After I changed the configuration so that selected_unassigned_variable is at the default setting, inference is set to forward_checking and ran the “harder” level sudoku back-tracking search took 45.93 seconds to run but was much faster in finding a solution for the “hardest” solution at 0.38 seconds. Next, I changed the configurations again to set selected_unassigned_variable to mrv, and left inference to equal forward_checking. With these configurations “harder” level took 0.008 seconds to find a solution and “hardest” level took 0.04 seconds. From these tests, it is obvious that forward_checking and mrv is the best configuration that returns the fastest solution. This would make sense that this combination would return the fastest results because (as far as I understand) mrv sets a restraint on the values to use as potential solutions for a certain position.
+
+
+Exercise 3.2 
+
+
+1. At n = 4, AC3 fails but both backtracking and min conflicts give a solution. Backtracking works until n = 10, but fails at n = 50. Min conflicts give quick solutions until n = 6000. Because AC3 is checking the consistency of a single arc (by making sure the constraint for an individual sub-problem is met), it would make that AC3 does not work for nQueens because nQueens requires path consistency to ensure, that after each move, the entire board is at a legal state. 
+2. Changing select_unassigned to mrv, and inference = no_inference allows backtracking to obtain results when n = 150 (and min_conflicts to find a solution even when n = 6000) While n is still not that large, it has improved significantly. Mrv, in choosing the most constrained variable first, is able to eliminate the assignments that do not lead to the solution, earlier in the game. Then it will have fewer possible solutions to solve and backtrack on. 
+3. Min conflicts take n-1 steps.
+
+
+Exercise 3.3
+1. Traditional problems start by assuming a move and then creating a subclass which encompasses specific restraints for the neighbouring states. It also includes possible actions and result, and a goal state. Then, with the constraints, results and actions given after making the first move, it makes the next move. Unlike traditional problems, CSPs are in a complete state and only require manipulation to reach the solution. CSPs have a set of variables with domains and a set of pre-defined domains for each of these variables (therefore it focuses on the constraints for individual states). 
+2. For both traditional problems and CSPs, the heuristic can be thought of as the number of moves away you are from finding a solution. But CSPs heuristic would matter mostly for individual states, while traditional problems would be concerned with how many moves away you are from the final solution.
