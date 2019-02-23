@@ -1,0 +1,31 @@
+﻿Exercise 4.1:
+
+
+b. Compute the value of P(Cavity|catch) by hand:
+        P(cavity | catch): (0.108 +0.072) / (0.108+0.072+0.016+0.144) = 0.529 
+        P(-cavity | catch): 1 - 0.529 = 0.471
+= <0.529, 0.471>
+
+
+Exercise 4.3:
+
+
+1. Drug Testing
+   1. P(user) = <0.089, 91.1>
+   2. P(test | user) = 0.99
+   3. P(-test | user) = 1 - 0.99 = 0.01
+   4. P(test | -user) = 1 - 0.98 = 0.02
+   5. P(User | test) = 
+                        P(user | test): P (user) * P(test| user) / P(test) 
+    = (0.089 * 0.99)/(0.99 + 0.02) = 0.087
+P(-user | catch): P (-user) * P(test| -user) / P(test) 
+    = (0.911 * 0.02)/ (0.99 +0.02) = 0.018
+P(User | test) = <0.087/ (0.087+0.018), 0.018/(0.087+0.018)
+= <0.829, 0.171>
+b. Breast Cancer: P(Cancer | test) 
+P(cancer | test) = P(test | cancer) * P (cancer) / P(test)
+        = (0.8 * 0.01) / (0.8 + 0.096) = 0.009
+P(-cancer | test) = P(test | - breast cancer) * P (-cancer) / P(test)
+= (0.99 * 0.096) / (0.8 + 0.096) = 0.106
+P(Cancer | test) = <0.009/ (0.009+0.106), 0.106/(0.009+0.106)
+   = <0.078, 0.923>
