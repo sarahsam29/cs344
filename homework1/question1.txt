@@ -1,0 +1,4 @@
+The earliest psychologists studied the human mind using introspection. Would this be a good way to inform efforts in AI to model human cognitive processes? (Please give a one-to-two-paragraph answer.)
+
+I believe that introspection is a potential starting point for modelling human cognition. Introspection gives one insight on how a human perceives information, reasons, memorizes and makes connections between events among several other aspects of cognition. But, because introspection is unique to each invdividual, modelling human cognition solely on introspection can create (unwated) biases. Moreover, it would be greatly challenging, if not impossible to model the variability that humans depict. Therefore, this model based on introspection would be an extremely limited and incomplete image of humanity. Nevertheless, introspection can give the process of modelling human cognition context, as it makes the developer aware of the different facts of humanity. 
+
