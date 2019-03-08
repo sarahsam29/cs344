@@ -6,7 +6,7 @@ It's taken from the AIMA Python code.
 @version updated on March 4, 2019
 '''
 
-from probability import BayesNet, enumeration_ask, elimination_ask
+from probability import BayesNet, enumeration_ask
 
 # Utility variables
 T, F = True, False
@@ -32,3 +32,5 @@ print(enumeration_ask('WetGrass', dict(Cloudy = T, Sprinkler = T, Rain = T), clo
 
 print("\nP(Cloudy|- wet grass):")
 print( enumeration_ask('Cloudy', dict(WetGrass = F), cloudy).show_approx())
+
+#I am turning in a physical copy of my hand-worked derivations.
