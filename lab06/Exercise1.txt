@@ -1,0 +1,41 @@
+Framing and Formulating exercise answers:
+
+1. The model will correctly identify between a stomach flu and food poisoning. 
+
+2. The ideal outcome will be differentiate between cause, incubation periods, and the symptoms to 
+differentiate the stomach flu from food poisoning. 
+
+3. a) This supervised learning model so it has information about the distinctions between stomach 
+   flu and food poisoning; the labeled data can act as a tool to check for correctness. If 97% give 
+   the correct diagnosis, then it is considered a success. 
+   b) The key result is the predicted diagnosis based on cause, incubation period and symptoms.
+   c) Failure entails misdiagnosis - predicting stomach flu when a person has food poisoning, and 
+   vice versa. If more than 3%  give the incorrect diagnosis, then it is considered a failure. 
+   
+4. a) The output for this model will be a diagnosis - stomach flu or food poisoning.
+   b) The output is defined by T/F values for the diagnosis (i.e Stomach flu = T, Food Poisoning = F).  
+   
+5. a)  The output will happen as soon as (or in a very reasonable time frame from when) the user has
+   inputted all the needed information. 
+   b) The output can be used to help the patient figure out appropriate methods to care for him, her
+   or themselves. Though this is too much like webmd, I’m realizing, and people should see a doctor 
+   before they try to treat themselves.
+   
+6. If we don’t have this ML model, we can try determining a diagnosis through probabilities of having
+a certain disease based on time of the year, and based on the incubation periods and symptoms.
+
+7. a) This model is an example of a binary classification ML problem where the prediction will be
+   choosing between the 2 labels (stomach flu and food poisoning).
+   b) It already is a binary classification model.
+
+8. Input1: cause (i.e virus vs. bacteria) 
+   Input2: Incubation period (ie. choose either 24-48 hours, or 2-6 hours)
+   Input3: list of symptoms (ie. fever, nausea)
+   Output: diagnosis (a label)
+   
+9. The data comes from historical health records and information from the CDC. New data, that still requires
+   a key result, comes from user inputs. 
+   
+10. Between cause, incubation period and symptoms, I will choose incubation period because there is great difference 
+    between the incubation periods of stomach flu and food poisoning. Symptoms overlap, which causes the 
+    confusion for most people and cause is often harder to detect until after a diagnosis is given.
