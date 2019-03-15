@@ -1,0 +1,35 @@
+Sarah Samuel 
+lab07, Exercise 2
+March 15, 2019
+
+
+a. Categorical data is generally text-based, and can be thought of overarching groups or classifications. It is possible 
+for categorical data to be numbers, only if the numbers cannot have arithmetic functions performed on them. Numerical data,
+on the other hand, is one that is a number (integer, float) on which it makes sense to perform arithmetic functions on.
+
+b. Solutions to Task 1-2 :
+
+  Task 1: 
+    train_model(
+	  learning_rate=0.00002,
+	  steps=600,
+	  batch_size=2)
+
+  RMSE: 166.50
+  
+  Task 2: 
+    train_model(
+	learning_rate=0.00002,
+	steps=1200,
+	batch_size=2,
+	input_feature="population")
+
+c. The hyperparameters are learning_rate, steps, and batch_size. There are no standards because the effects of different 
+hyperparameters are dependent on the data. But there are general rules to follow: the training error should decrease, the 
+training should eventually converge, have reasonable batch sizes to avoid instability, and the training error should not 
+decrease too slowly or have a dramatic variance. 
+
+
+
+
+
