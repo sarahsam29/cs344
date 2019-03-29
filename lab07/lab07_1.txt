@@ -11,7 +11,7 @@ a. Solutions to task 1-2:
   Task 2: 
     cities.reindex([9,4,7,5])
     
-b. Numpy is an essential for scientific computation which includes elegant features on arrays or matrices, for example. But
+b. Numpy is essential for scientific computation which includes elegant features on arrays or matrices, for example. But
 Pandas, which is built upon NumPy, is especially useful when you need more sophisticated data analysis tools. Specifically, 
 Pandas can elegantly handle large and messy datasets. It has the functionality to clean, restructure/manipulate, and analyze
 real-world (dirty) data.    
