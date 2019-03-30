@@ -1,0 +1,21 @@
+Sarah Samuel 
+lab08, Exercise 8.3
+March 30, 2019
+
+
+a) Seaborn is based on MatPlotlib and seems flexible. It has the ability to generate a variety of plots and be able to 
+correlate many variables simultaneously. MatPlotlib has more structure, and allows for greater details and complexity in plots.
+
+b) The dataset has 397 observations, which is fairly small. But, it could serve to give us a rough/initial estimate.
+
+c) Because each feature is on a different scale, it will be useful to have them all of the same scale. This way, the weights of 
+the neural nets will work better, and in general we won’t have a model that is dependent on the input.
+
+d) I am actually not certain if this is a linear regression model. But by looking at the visual output of the Mean Square 
+Error[mpg], which  has a non-linear trend, I believe that this is a non-linear regression.
+
+e) I agree, it seems as if smaller networks would fit a small network appropriately. I’m assuming that if the model is more 
+complex and there isn’t enough data, this may cause an issue of over-fitting. But if the model is simple and there is a lot of 
+data you might struggle with under-fitting. 
+
+
