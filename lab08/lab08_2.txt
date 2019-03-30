@@ -2,7 +2,6 @@ Sarah Samuel
 lab08, Exercise 1
 March 30, 2019
 
-Exercise 8.2:
 
 a) The benefit for FTRL is that it can scale the learning rate differently for different coefficients. This is particularly 
 beneficial for those features which have non-zero numbers.
