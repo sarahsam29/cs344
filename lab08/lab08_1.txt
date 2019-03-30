@@ -1,8 +1,8 @@
 Sarah Samuel 
-lab07, Exercise 1
+lab08, Exercise 1
 March 30, 2019
 
-Exercise 8.1
+Exercise 8.1:
 
 a) The Pearson’s correlation coefficient (PCC) is a measure of linear correlation between two variables (generally the 
 response and explanatory). The values of a PCC can fall between -1 and 1, where -1 indicates complete negative correlation
@@ -10,6 +10,54 @@ between the two variables, 0 indicates no correlation, and 1 indicates a complet
 a 0.7 pcc with the target, which makes sense because the target is based off of the median income but is also interaction 
 with the other features.
 
-b) 
+
+b) solutions to task 1 and 2: 
+
+Task 1:
+    minimal_features = [
+        "median_income",
+        "housing_median_age"
+    ]
+    minimal_training_examples = training_examples[minimal_features]
+    minimal_validation_examples = validation_examples[minimal_features]
+
+    train_model(
+        learning_rate=0.01,
+        steps=1000,
+        batch_size=5,
+        training_examples=minimal_training_examples,
+        training_targets=training_targets,
+        validation_examples=minimal_validation_examples,
+        validation_targets=validation_targets)
+
+    RMSE: 
+    111.61, while google's was 113.01. I barely beat it. And, I also noticed that my features are not all that linear, though they are much better than google's output with their combination of features.
+  
+Task 2: 
+  
+    training_examples["dist_from_SF"] = abs(training_examples["latitude"] - 38)
+    validation_examples["dist_from_SF"] = abs(validation_examples["latitude"] - 38)
+
+
+    minimal_features = [
+      "median_income",
+      "dist_from_SF",
+    ]
+
+    minimal_training_examples = training_examples[minimal_features]
+    minimal_validation_examples = validation_examples[minimal_features]
+
+    _ = train_model(
+        learning_rate=0.01,
+        steps=500,
+        batch_size=5,
+        training_examples=minimal_training_examples,
+        training_targets=training_targets,
+        validation_examples=minimal_validation_examples,
+    validation_targets=validation_targets)
+    
+    RMSE: 
+    My model's RMSE output was 115.04 and it defintely looks far more linear than the combination of task 1’s features. Google's baseline was 141.59
+
 
 
