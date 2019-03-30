@@ -2,7 +2,6 @@ Sarah Samuel
 lab08, Exercise 1
 March 30, 2019
 
-Exercise 8.1:
 
 a) The Pearson’s correlation coefficient (PCC) is a measure of linear correlation between two variables (generally the 
 response and explanatory). The values of a PCC can fall between -1 and 1, where -1 indicates complete negative correlation
