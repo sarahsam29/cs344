@@ -1,0 +1,37 @@
+Sarah Samuel
+CS 344, lab09
+7/9/2019
+
+Exercise 9.3:
+
+a) Exercise 1:
+  i. The size of the entire dataset is 25000 but only 2000 images are used in the exercise.
+  
+  ii. The convnet has an additional layer than the one we did in class. This convnet has a layer of 16 filters in addition to the 
+  layers of 32 and 46 filters which the class convnet includes. Moreover, the convnet we saw in class uses unary classification, while
+  the exercise’s convnet uses binary classification. This means it has an extra layer to perform relu transformations that output a 
+  probability between 0 and 1. 
+  
+  iii. The resulting picture becomes grainer and more unrecognizable the farter we go down the layers of the neural net. 
+  
+b) Exercise 2:
+  i. Data augmenting is a data preprocessing mechansim that utilized random transformations so that, at training time, the model will 
+  be introduced to different images such that it does not see the same image twice. Data augmentation is used to solve the issue of 
+  over-fitting and helps the model to generalize better.
+  
+  ii. loss: 0.5138 
+      acc: 0.7490 
+      val_loss: 0.4819 
+      val_acc: 0.7880
+      
+      hyperparameters : 
+
+      history = model.fit_generator(
+            train_generator,
+            steps_per_epoch=90,
+            epochs=30,
+            validation_data=validation_generator,
+            validation_steps=50,
+            verbose=2)
+            
+
