@@ -1,0 +1,34 @@
+Sarah Samuel
+CS 344, Lab09
+7/4/2019
+
+Exercise 9.1:
+
+a) Linear Regressor is not the best option. It uses a L2 loss which does not harshly penalize misclassifications when the resulting 
+output is interpreted as a probability. 
+
+b) As I mentioned above, L2 loss does not harshly penalize misclassifications. There should be a significant difference in classifying
+the probabilities of 0.9 and 0.9999, but L2 loss does not differentiate these cases. LogLoss, however, does properly penalize those 
+cases of misclassification. The scale changes when taking the log of the losses, and therefore the probabilities are reflected with 
+more precision. This allows LogLoss to differentiate cases more accurately. 
+
+c)The Logistic regressor outputted a loss of 0.53 which is comparatively worse than the Linear regressor which gave a loss of 0.44. I am
+a bit surprised because LogLoss seems to be stricter with misclassifications (but perhaps I’m not correctly interpreting the loss numbers
+[0.53 and 0.44]). 
+
+d) AUC on the validation set: 0.79
+   Accuracy on the validation set: 0.78
+
+    linear_classifier = train_linear_classifier_model(
+        learning_rate=0.000005,
+        steps=5000,
+        batch_size=200,
+        training_examples=training_examples,
+        training_targets=training_targets,
+        validation_examples=validation_examples,
+        validation_targets=validation_targets)
+
+    evaluation_metrics = linear_classifier.evaluate(input_fn=predict_validation_input_fn)
+
+
+
