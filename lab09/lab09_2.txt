@@ -1,0 +1,26 @@
+Sarah Samuel
+CS 344, lab 09
+7/4/2019
+
+Exercise 9.2: 
+
+a) Regularizing with respect to sparsity reduces the size of the model and increases efficiency. In a linear model, for example, when
+a weight is set to 0, you can completely ignore the feature that it corresponds to. This simplifies the model and allows it to run 
+more efficiently in terms of run-time, and by avoiding over-fitting.
+
+b) L1 regularization increases sparsity by penalizing the sum of the absolute values. 
+
+c) After a few trials, I finally got a LogLoss of 0.23 and a model size of 576, with the following parameter values:
+
+    linear_classifier = train_linear_classifier_model(
+        learning_rate=0.2,
+        regularization_strength=0.6,
+        steps=300,
+        batch_size=100,
+        feature_columns=construct_feature_columns(),
+        training_examples=training_examples,
+        training_targets=training_targets,
+        validation_examples=validation_examples,
+        validation_targets=validation_targets)
+        
+        
