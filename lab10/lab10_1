@@ -1,0 +1,58 @@
+Sarah Samuel
+CS 334, lab10
+
+Exercise 1: 
+
+1. Keras and TensorFlow are both libraries. Keras is built upon TensorFlow and uses all of TensorFlow functionality but makes 
+writing models easier and user-friendly. It includes defaults, which is useful for beginners attempting to train models, but also 
+have the availability to manipulate the defaults for the trained users.Tensorflow is lower-level, you need to have knowledge of and 
+ability to train models. Since I am just beginning with training neural nets, it’s easier for me to use Keras because it takes care
+of a lot of things I may not know how to manipulate. 
+
+2. Solutions to Task 1 and 2: 
+
+  Task 1: 
+      dnn_regressor = train_nn_regression_model(
+        learning_rate=0.001,
+        steps=2300,
+        batch_size=100,
+        hidden_units=[10, 10],
+        training_examples=training_examples,
+        training_targets=training_targets,
+        validation_examples=validation_examples,
+        validation_targets=validation_targets)
+    Final RMSE on training data = 107.92
+    Final RMSE on Validation data = 111.60
+    
+    Task 2: 
+        def normalize_linear_scale(examples_dataframe):
+
+        processed_features = pd.DataFrame()
+        processed_features["latitude"] = linear_scale(examples_dataframe["latitude"])
+        processed_features["longitude"] = linear_scale(examples_dataframe["longitude"])
+        processed_features["housing_median_age"] = linear_scale(examples_dataframe["housing_median_age"])
+        processed_features["total_rooms"] = linear_scale(examples_dataframe["total_rooms"])
+        processed_features["total_bedrooms"] = linear_scale(examples_dataframe["total_bedrooms"])
+        processed_features["population"] = linear_scale(examples_dataframe["population"])
+        processed_features["households"] = linear_scale(examples_dataframe["households"])
+        processed_features["median_income"] = linear_scale(examples_dataframe["median_income"])
+        processed_features["rooms_per_person"] = linear_scale(examples_dataframe["rooms_per_person"])
+        return processed_features
+
+      normalized_dataframe = normalize_linear_scale(preprocess_features(california_housing_dataframe))
+      normalized_training_examples = normalized_dataframe.head(12000)
+      normalized_validation_examples = normalized_dataframe.tail(5000)
+
+      _ = train_nn_regression_model(
+          my_optimizer=tf.train.GradientDescentOptimizer(learning_rate=0.0007),
+          steps=3000,
+          batch_size=60,
+          hidden_units=[10, 10],
+          training_examples=normalized_training_examples,
+          training_targets=training_targets,
+          validation_examples=normalized_validation_examples,
+          validation_targets=validation_targets)
+          
+          Final RMSE (training set) : 109.55
+          Final RMSE (validation set) : 110.20
+
