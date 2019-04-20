@@ -1,0 +1,42 @@
+Sarah Samuel
+CS 334, Lab10
+April 20, 2019
+
+Exercise 10.3
+
+Task 1: 
+In this example, the confusion matrix describes which classes were misclassified as other classes. It explains the likelihood 
+for one hand-written digit in the dataset being mistaken for another digits. 
+
+classifier = train_linear_classification_model(
+            learning_rate=0.03,
+            steps=1000,
+            batch_size=30,
+            training_examples=training_examples,
+            training_targets=training_targets,
+            validation_examples=validation_examples,
+            validation_targets=validation_targets)
+ Final accuracy on validation set: 0.90
+ 
+Task 2: 
+
+The Tensorflow network uses the Adagrad optimizer with DNNclasifer object.
+
+  classifier = train_nn_classification_model(
+    learning_rate=0.05,
+    steps=1000,
+    batch_size=30,
+    hidden_units=[100, 100],
+    training_examples=training_examples,
+    training_targets=training_targets,
+    validation_examples=validation_examples,
+    validation_targets=validation_targets)
+
+  Final accuracy on validation data: 0.95
+
+Task 3: 
+Step = 10 is small for the model to accurately learn the features. Step = 100 is quite a bit better since the model appears to be 
+converging for most of the nodes, and we’re able to notice a few details available in the pixel (as opposed to just shades of colour
+and outlines). At step = 1000, the model able to have recognizable features and smoother transitions from one pixel to the next.
+
+
