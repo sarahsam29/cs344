@@ -49,7 +49,7 @@
 
 % Part c: 
 % A horn clause has at most one positive literal and can only imply one thing, while prop. logic can imply both a conjunction and 
-disjunction. A horn clause is able to use variables which is useful, propostional logic doesn't have this functionality. 
+% disjunction. A horn clause is able to use variables which is useful, propostional logic doesn't have this functionality. 
 
 % Part d:
 
