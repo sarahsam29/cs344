@@ -38,14 +38,14 @@
     % witch(Y). Returns “Procedure ‘witch(A)’ does not exist” 
 
 % There is no fact “witch” in the knowledge base so Prolog lets us know that the procedure does not exist.
-% Because facts state that Harry has a wand and is a quidditch player, Harry satisfies the rule Hasbroom. Moreover, since Harry 
-% Hasbroom and HasWand, wizard(Harry) responds True. Wizard(Y) Returns Y = Ron because Ron is the first person declared as a wizard.
+% Because facts state that Harry has a wand and is a quidditch player, harry satisfies the rule Hasbroom. Moreover, since harry 
+% Hasbroom and HasWand, wizard(harry) responds True. Wizard(Y) Returns Y = ron because ron is the first person declared as a wizard.
 
 
 % Part b: 
 
 % Yes, Prolog does use Modus Ponenes. An example of this is seen in Exercise 1.5 :
-	hasBroom :- quidditchPlayer(Y), quidditchPlayer(Harry), thus hasBroom(Harry). 
+	hasBroom :- quidditchPlayer(Y), quidditchPlayer(harry), thus hasBroom(harry). 
 
 % Part c: 
 % A horn clause has at most one positive literal. 
