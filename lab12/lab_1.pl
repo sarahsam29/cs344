@@ -48,9 +48,12 @@
 	hasBroom :- quidditchPlayer(Y), quidditchPlayer(harry), thus hasBroom(harry). 
 
 % Part c: 
-% A horn clause has at most one positive literal. 
+% A horn clause has at most one positive literal and can only imply one thing, while prop. logic can imply both a conjunction and 
+disjunction. A horn clause is able to use variables which is useful, propostional logic doesn't have this functionality. 
 
 % Part d:
 
 % Yes, Prolog has a distinction. The facts that a user tells are stored in knowledge bases. Then the use can ask questions (queries) 
 % using a knowledge base to gain information. 
+
+
