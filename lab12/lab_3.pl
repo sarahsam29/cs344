@@ -9,12 +9,12 @@ witch(X):- burn(X);
      turnsPeopleIntoNewt(X).
 burn(X):- wood(X).
 floats(X):-
-	wood(X);
+    wood(X);
     apples(X);
     smallRocks(X); 
     cider(X); 
     cherries(X);
-	duck(X).
+    duck(X).
 wood(X):- weighsTheSameAsDuck(X).
 looksLikeWitch(woman).
 turnsPeopleIntoNewt(woman).
