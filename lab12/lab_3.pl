@@ -2,7 +2,7 @@
 % CS334, Lab12
 % April 27, 2019
 
-Exercise 3: 
+% Exercise 3: 
 
 witch(X):- burn(X);
      looksLikeWitch(X);
