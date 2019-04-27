@@ -1,10 +1,10 @@
-Sarah Samuel
-CS 344 Lab12
-April 27, 2019
+%Sarah Samuel
+%CS 344 Lab12
+%April 27, 2019
 
 
-Part a:
-Exercise 1.4: 
+%Part a:
+%Exercise 1.4: 
 
     % 1. butch is a killer: 
     killer(Butch).
@@ -27,7 +27,7 @@ Exercise 1.4:
          nutritious(X);
          tasty(X).
 
-Exercise 1.5: 
+%Exercise 1.5: 
 
     % wizard(ron). Returns true
     % witch(ron). Returns “Procedure ‘witch(A)’ does not exist”
@@ -37,22 +37,22 @@ Exercise 1.5:
     % wizard(Y). Y = ron
     % witch(Y). Returns “Procedure ‘witch(A)’ does not exist” 
 
-There is no fact “witch” in the knowledge base so Prolog lets us know that the procedure does not exist.
-Because facts state that Harry has a wand and is a quidditch player, Harry satisfies the rule Hasbroom. Moreover, since Harry 
-Hasbroom and HasWand, wizard(Harry) responds True. Wizard(Y) Returns Y = Ron because Ron is the first person declared as a wizard.
+%There is no fact “witch” in the knowledge base so Prolog lets us know that the procedure does not exist.
+%Because facts state that Harry has a wand and is a quidditch player, Harry satisfies the rule Hasbroom. Moreover, since Harry 
+%Hasbroom and HasWand, wizard(Harry) responds True. Wizard(Y) Returns Y = Ron because Ron is the first person declared as a wizard.
 
 
-Part b: 
+%Part b: 
 
-Yes, Prolog does use Modus Ponenes. An example of this is seen in Exercise 1.5 :
+%Yes, Prolog does use Modus Ponenes. An example of this is seen in Exercise 1.5 :
 	hasBroom :- quidditchPlayer(Y), quidditchPlayer(Harry), thus hasBroom(Harry). 
 
-Part c: 
-A horn clause has at most one positive literal. 
+%Part c: 
+%A horn clause has at most one positive literal. 
 
-Part d:
+%Part d:
 
-Yes, Prolog has a distinction. The facts that a user tells are stored in knowledge bases. Then the use can ask questions (queries) 
-using a knowledge base to gain information. 
+%Yes, Prolog has a distinction. The facts that a user tells are stored in knowledge bases. Then the use can ask questions (queries) 
+%using a knowledge base to gain information. 
 
 
