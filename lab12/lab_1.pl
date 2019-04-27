@@ -10,11 +10,11 @@
     killer(Butch).
 
     % 2. Mia and Marsellus are married:
-    married(Mia, Marcellus)
-    married(Marsellus, Mia)
+    married(Mia, Marcellus).
+    married(Marsellus, Mia).
 
     % 3. Zed is dead:
-    dead(Zed)
+    dead(Zed).
 
     % 4. Marsellus kills everyone who gives Mia a foot massage:
     kills(Marsellus, X) :- givesFootMassage(X, Mia).
